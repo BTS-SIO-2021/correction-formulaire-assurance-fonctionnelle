@@ -7,6 +7,24 @@
     <title>Assurance Formulaire devis</title>
 </head>
 <body>
+    <?php
+
+    include 'fonctions_utilitaires.php';
+
+    $age = getCleanNumericPostParam('age', 17);
+    $anciennetePermis = getCleanNumericPostParam('anciennetePermis');
+    $accident = getCleanNumericPostParam('accident');
+    $ancienneteAssurance = getCleanNumericPostParam('assurance');
+
+    //var_dump($age, $ancienneteAssurance, $accident, $anciennetePermis);
+
+    $test = getTarif(30,1,0,0);
+
+    var_dump($test);
+
+
+
+    ?>
 <form action="" method="post" >
     <div>
         <label for="name">Renseignez votre age: </label>
