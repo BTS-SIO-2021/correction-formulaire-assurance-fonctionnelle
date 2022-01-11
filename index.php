@@ -33,28 +33,55 @@ Pour cela et pour changer, plutôt que d'utiliser if (...) alors echo ... ; nous
     <p> Vous avez le droit au tarif : <strong style="color:<?=$message['css'];?>"><?=$message["message"];?></strong>
 <?php endif ;?>
 
-<form action="" method="post" >
+<form action="" method="post" class="w-50 mx-auto"  >
     <div>
-        <label for="name" class="form-label">Renseignez votre age: </label>
+        <label for="name" class="form-label pt-3">Renseignez votre age: </label>
         <input type="number" min="18" name="age" id="name" required placeholder="chiffre en années" class="form-control">
     </div>
     <div>
-        <label for="anciennete" class="form-label">Renseignez l'ancienneté de votre permis: </label>
+        <label for="anciennete" class="form-label pt-3">Renseignez l'ancienneté de votre permis: </label>
         <input type="number" min="0" name="anciennetePermis" id="anciennete" required placeholder="xx années" class="form-control">
     </div>
     <div>
-        <label for="assurance" class="form-label">Renseignez l'ancienneté de votre assurance: </label>
+        <label for="assurance" class="form-label pt-3">Renseignez l'ancienneté de votre assurance: </label>
         <input type="number" min="0" name="assurance" id="ancienneteAssurance" required placeholder="format en chiffre" class="form-control">
     </div>
     <div>
-        <label for="accident" class="form-label">Renseignez votre nombre d'accident responsable: </label>
+        <label for="accident" class="form-label pt-3">Renseignez votre nombre d'accident responsable: </label>
         <input type="number" min="0" name="accident" id="accident" required placeholder="merci d'indiquer un nombre" class="form-control">
     </div>
     
     <div>
-        <input type="submit" value="Enregistrer" class="btn btn-primary">
+        <input type="submit" value="Enregistrer" class="btn btn-primary d-grid col-6 mx-auto mt-3">
     </div>
 </form>
+
+<div id="carouselExampleIndicators" class="carousel slide w-50 mx-auto pt-5" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="image/beagle.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="image/chien-min.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="image/chiencourt.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
