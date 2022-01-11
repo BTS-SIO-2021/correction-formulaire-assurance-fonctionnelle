@@ -64,4 +64,46 @@ function getTarif(int $age, int $anciennetePermis, int $accident, int $anciennet
     return $tarif;
 }
 
+/* Je créé une nouvelle fonction, son objectif est de me donner 2 choses : 
+1) une couleur
+2) un message 
+*/
+function getColorandMessage(int $tarif, $valeurParDefaut =0){
+    if(isset($tarif)){
+        switch($tarif){
+            case 0:
+                $info = [
+                    'message' => 'Refus d\assurer',
+                    'css' => '#DCDCDC' 
+                ];
+            break;
+            case 1:
+                $info = [
+                    'message' => 'Rouge',
+                    'css' => '#CD5C5C'
+                ] ;
+            break;
+            case 2:
+                $info = [
+                    'message' => 'Orange',
+                    'css' => '#FFA500'
+                ] ;
+            break;
+            case 3:
+                $info = [
+                    'message' => 'Vert',
+                    'css' => '#90EE90'
+                ] ;
+            break;
+            case 4:
+                $info = [
+                    'message' => 'Bleu',
+                    'css' => '	#4169E1'
+                ] ;
+            break;
+        }
+        return $info;
+    }
+}
+
 ?>

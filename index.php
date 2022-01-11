@@ -18,13 +18,19 @@
 
     //var_dump($age, $ancienneteAssurance, $accident, $anciennetePermis);
 
-    $test = getTarif(30,1,0,0);
+    $tarif = getTarif($age, $anciennetePermis, $accident, $ancienneteAssurance);
 
-    var_dump($test);
-
-
+    $message = getColorandMessage($tarif);
 
     ?>
+
+<!-- La je suis sortie de mon code php je suis dans ma partie HTML, j'ai envie d'écrire du HTML en fonction d'un condition php. 
+Pour cela et pour changer, plutôt que d'utiliser if (...) alors echo ... ; nous allons utiliser la syntaxe alternative : https://www.php.net/manual/fr/control-structures.alternative-syntax.php
+-->
+<?php if(!empty($_POST) && isset($message)) : ?>
+    <p> Vous avez le droit au tarif : <strong style="color:<?=$message['css'];?>"><?=$message["message"];?></strong>
+<?php endif ;?>
+
 <form action="" method="post" >
     <div>
         <label for="name">Renseignez votre age: </label>
